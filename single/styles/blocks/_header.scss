@@ -1,0 +1,35 @@
+.header {
+  .container {
+    background-image: url("../../../single/assets/imgs/background.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    @include flex(row, space-between, center, nowrap);
+    padding-top: 3rem;
+  }
+
+  &-title {
+    a {
+      display: block;
+      @include font(Georgia, normal, 400, 3.2rem, 110%, 0.06em, $light-brown);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @include font(Arial, normal, 400, 1.3rem, 1.5rem, 0.1em, $white-color);
+    }
+  }
+}
+
+.nav {
+  &-list {
+    @include flex(row, space-between, center, nowrap);
+    gap: 3.5rem;
+
+    &__item {
+      a {
+        @include font(Arial, normal, 400, 1.5rem, 160%, 0, $white-grey-color);
+      }
+    }
+  }
+}

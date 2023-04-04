@@ -1,0 +1,42 @@
+@mixin flex($flex-direction, $justify-content, $align-items, $flex-wrap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin font(
+  $font-family,
+  $font-style,
+  $font-weight,
+  $font-size,
+  $line-height,
+  $letter-spacing,
+  $color
+) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color;
+}
+
+@mixin container {
+  max-width: 1280px;
+  padding-inline: 40px;
+  margin: 0 auto;
+}
+
+@mixin button {
+    border-radius: $r100;
+    @include font(Georgia, normal, 400, 1.7rem, 130%, 0.06em, $white-color);
+    padding: 1.5rem 4.5rem;
+    color: $dark-color;
+    background-color: $light-brown;
+    &:hover {
+        background-color: $more-light-brown;
+    }
+} 
