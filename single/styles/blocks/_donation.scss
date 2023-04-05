@@ -1,0 +1,38 @@
+.donation {
+  .container {
+    @include flex(row, center, center, nowrap);
+    gap: 3rem;
+    padding-block: 8rem 10rem;
+    background-color: $dull-white-color;
+  }
+
+  &__title {
+    @include title(left);
+  }
+
+  &-description {
+    @include flex(column, flex-start, flex-start, nowrap);
+    gap: 20px;
+
+    &-card {
+      @include flex(row, flex-start, center, nowrap);
+      gap: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-radius: $r9;
+      background-color: $light-brown;
+
+      p {
+        @include font(Georgia, normal, 400, 2rem, 115%, 0.06em, $dark-grey-color);
+      }
+    }
+
+    &__name {
+      @include font(Georgia, normal, 400, 1.5rem, 110%, 0.06em, $dark-grey-color);
+    }
+
+    &__text {
+      @include font(Arial, italic, 400, 1.2rem, 1.8rem, 0, #b2b2b2);
+      max-width: 38rem;
+    }
+  }
+}

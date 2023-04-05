@@ -1,0 +1,27 @@
+.help {
+  .container {
+    @include flex(column, flex-start, center, nowrap);
+    gap: 6rem;
+    padding-block: 8rem 10rem;
+    background-color: $white-color;
+  }
+
+  &__title {
+    @include title(center);
+  }
+
+  &-list {
+    @include flex(row, center, center, wrap);
+    gap: 5.5rem 12rem;
+    padding-inline: 12.7rem;
+
+    &-item {
+      @include flex(column, flex-start, center, nowrap);
+      gap: 3rem;
+
+      p {
+        @include font(Georgia, normal, 400, 2rem, 115%, 0, $dark-grey-color);
+      }
+    }
+  }
+}

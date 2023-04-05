@@ -24,19 +24,79 @@
   color: $color;
 }
 
+// BLOCKS
+
 @mixin container {
-  max-width: 1280px;
-  padding-inline: 40px;
+  max-width: 128rem;
+  padding-inline: 4rem;
   margin: 0 auto;
 }
 
+
+@mixin title($text-align) {
+  @include font(Georgia, normal, 400, 3.5rem, 130%, 0, $dark-grey-color);
+  text-align: $text-align;
+}
+
+@mixin card {
+  @include flex(column, flex-start, center, nowrap);
+      gap: 3rem;
+      border-radius: $r9;
+      background-color: $light-white-color;
+      padding-bottom: 3rem;
+
+      &__title {
+        @include font(Georgia, normal, 400, 2rem, 2.3rem, 0.06em, $dark-grey-color);
+      }
+      &__button {
+        @include emptyButton;
+      }
+}
+
+
+// BUTTONS 
+
 @mixin button {
-    border-radius: $r100;
-    @include font(Georgia, normal, 400, 1.7rem, 130%, 0.06em, $white-color);
-    padding: 1.5rem 4.5rem;
-    color: $dark-color;
+  border-radius: $r100;
+  @include font(Georgia, normal, 400, 1.7rem, 130%, 0.06em, $white-color);
+  padding: 1.5rem 4.5rem;
+  color: $dark-color;
+  background-color: $light-brown;
+  &:hover {
+    background-color: $more-light-brown;
+  }
+}
+
+@mixin emptyButton {
+  @include button;
+  background-color: inherit;
+  border: 2px solid $light-brown;
+  &:hover {
+    border-color: $more-light-brown;
+  }
+}
+
+
+@mixin roundButton {
+  width: 5.2rem;
+  height: 5.2rem;
+  border: 0.2rem solid $light-brown;
+  border-radius: 50%;
+  @include font(Georgia, normal, 400, 2rem, 2.3rem, 0.06em, $dark-grey-color);
+  text-align: center;
+
+  &:hover {
     background-color: $light-brown;
+  }
+}
+
+@mixin roundButtonNotActive {
+  border-color: $white-grey-color;
+    color: $white-grey-color;
+    cursor: default;
     &:hover {
-        background-color: $more-light-brown;
+      background: none;
     }
-} 
+}
+
+

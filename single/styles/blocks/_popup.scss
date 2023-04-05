@@ -1,0 +1,35 @@
+.popup {
+  background-color: $dark-transparent-color;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  @include flex(column, center, center, nowrap);
+
+  &-container {
+    width: 90rem;
+    background-color: $light-white-color;
+    height: 50rem;
+    border-radius: $r9;
+    @include flex(row, flex-start, stretch, nowrap);
+    gap: 3rem;
+  }
+  &-img {
+    img {
+      height: 100%;
+    }
+  }
+
+  &-description {
+    max-width: 10.2rem;
+    &__title {
+        @include font(Georgia, normal, 400, 3.5rem, 130%, 0.06em, $dark-color);
+
+    }
+ 
+  }
+}
+
+.popup--notActive {
+  display: none;
+}

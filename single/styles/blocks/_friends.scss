@@ -1,0 +1,43 @@
+.friends {
+  .container {
+    @include flex(column, flex-start, center, nowrap);
+    gap: 6rem;
+    padding-block: 8rem 10rem;
+    background-color: $dull-white-color;
+  }
+
+  &__title {
+    @include title(center);
+  }
+  &__link {
+    @include button;
+  }
+}
+
+// SLIDER
+.slider {
+  @include flex(row, flex-start, center, nowrap);
+  gap: 5.3rem;
+
+  &-container {
+    max-width: 99rem;
+    overflow: hidden;
+  }
+  &-list {
+    position: relative;
+    @include flex(row, flex-start, center, nowrap);
+    gap: 9rem;
+    transition: left 0.3s ease;
+
+    &-item {
+      @include card;
+    }
+  }
+
+  &__button {
+    @include roundButton;
+  }
+  &__button--notActive {
+    @include roundButtonNotActive;
+  }
+}
