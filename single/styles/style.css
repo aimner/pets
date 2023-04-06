@@ -826,12 +826,11 @@ html {
   align-items: stretch;
   flex-wrap: nowrap;
   gap: 3rem;
+  padding-right: 2rem;
 }
 .popup-img img {
   height: 100%;
-}
-.popup-description {
-  max-width: 10.2rem;
+  border-radius: 0.9rem;
 }
 .popup-description__title {
   font-family: Georgia;
@@ -839,6 +838,49 @@ html {
   font-weight: 400;
   font-size: 3.5rem;
   line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  margin-block: 5rem 1rem;
+}
+.popup-description__breed {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  margin-bottom: 4rem;
+}
+.popup-description__text {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  margin-bottom: 4rem;
+}
+.popup-description-list-item {
+  list-style-type: disc;
+  margin-bottom: 1.1rem;
+}
+.popup-description-list-item span:first-child {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.popup-description-list-item span:last-child {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 110%;
   letter-spacing: 0.06em;
   color: #292929;
 }

@@ -13,20 +13,44 @@
     border-radius: $r9;
     @include flex(row, flex-start, stretch, nowrap);
     gap: 3rem;
+    padding-right: 2rem;
   }
   &-img {
     img {
       height: 100%;
+      border-radius: $r9;
     }
   }
 
   &-description {
-    max-width: 10.2rem;
+    // max-width: 10.2rem;
+
     &__title {
-        @include font(Georgia, normal, 400, 3.5rem, 130%, 0.06em, $dark-color);
+      @include font(Georgia, normal, 400, 3.5rem, 130%, 0.06em, $dark-color);
+      margin-block: 5rem 1rem;
+    }
+
+    &__breed {
+      @include font(Georgia, normal, 400, 2rem, 115%, 0.06em, $dark-color);
+      margin-bottom: 4rem;
+    }
+
+    &__text {
+      @include font(Georgia, normal, 400, 1.5rem, 110%, 0.06em, $dark-color);
+      margin-bottom: 4rem;
 
     }
- 
+    &-list-item {
+      list-style-type: disc;
+      margin-bottom: 1.1rem;
+      span:first-child {
+        @include font(Georgia, normal, 700, 1.5rem, 110%, 0.06em, $dark-color);
+      }
+      span:last-child {
+
+        @include font(Georgia, normal, 400, 1.5rem, 110%, 0.06em, $dark-color);
+      }
+    }
   }
 }
 
