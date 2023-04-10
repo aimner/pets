@@ -22,12 +22,22 @@
     }
   }
 
+  &__closeButton {
+    @include roundButton;
+    align-self: flex-end;
+    margin-block: 1rem;
+    background-image: url('../../../single/assets/imgs/close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   &-description {
-    // max-width: 10.2rem;
+    @include flex(column, flex-start, flex-start, nowrap);
+
 
     &__title {
       @include font(Georgia, normal, 400, 3.5rem, 130%, 0.06em, $dark-color);
-      margin-block: 5rem 1rem;
+  
     }
 
     &__breed {

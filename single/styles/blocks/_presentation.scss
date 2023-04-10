@@ -31,5 +31,27 @@
   &-img {
     max-width: 69.8rem;
     max-height: 72.8rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (width < 1280px) {
+    .container {
+      padding-top: 6rem;
+      @include flex(column, space-between, center, nowrap);
+      background-position: center 0;
+    }
+
+    &-img {
+      max-width: 56.9rem;
+      max-height: 59.3rem;
+      align-self: flex-end;
+    }
+
+    a {
+      align-self: center;
+    }
   }
 }

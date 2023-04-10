@@ -12,16 +12,25 @@
 
   &-list {
     @include flex(row, center, center, wrap);
-    gap: 5.5rem 12rem;
-    padding-inline: 12.7rem;
+    gap: 5.5rem 6rem;
+    padding-inline: 9.7rem;
 
     &-item {
       @include flex(column, flex-start, center, nowrap);
       gap: 3rem;
+      width: 15rem;
 
       p {
         @include font(Georgia, normal, 400, 2rem, 115%, 0, $dark-grey-color);
+        text-align: center;
       }
+    }
+  }
+
+  @media (width < 1280px) {
+    &-list {
+      padding-inline: 6rem;
+      gap: 6rem;
     }
   }
 }

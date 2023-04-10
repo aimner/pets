@@ -2,6 +2,12 @@
    v2.0-modified | 20110126
    License: none (public domain)
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -347,12 +353,16 @@ html {
   padding-inline: 4rem;
   margin: 0 auto;
 }
+@media (width < 1280px) {
+  .container {
+    padding-inline: 3rem;
+  }
+}
 
 .header .container {
   background-image: url("../../../single/assets/imgs/background.png");
   background-repeat: no-repeat;
   background-position: center 0;
-  background-size: cover;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -380,7 +390,6 @@ html {
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
-
 .nav-list {
   display: flex;
   flex-direction: row;
@@ -397,6 +406,59 @@ html {
   line-height: 160%;
   letter-spacing: 0;
   color: #CDCDCD;
+}
+@media (width < 768px) {
+  .nav {
+    position: fixed;
+    background-color: red;
+    top: 5rem;
+    right: 0;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (width >= 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger .line {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger .hamburger:hover {
+  cursor: pointer;
+}
+
+.is-active {
+  margin-top: 45px;
+  margin-right: 54px;
+  width: 30px;
+  height: 30px;
+}
+
+.is-active .line:nth-child(2) {
+  transform: translateY(4px) rotate(90deg);
+}
+
+.is-active .line:nth-child(1) {
+  transform: translateX(10px) translateY(14px) rotate(90deg);
+  margin: 0 0 0 0;
+}
+
+.is-active .line:nth-child(3) {
+  transform: translateX(-10px) translateY(-6px) rotate(-90deg);
+  margin: 0 0 0 0;
 }
 
 .presentation .container {
@@ -461,6 +523,29 @@ html {
   max-width: 69.8rem;
   max-height: 72.8rem;
 }
+.presentation-img img {
+  width: 100%;
+  height: 100%;
+}
+@media (width < 1280px) {
+  .presentation .container {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-position: center 0;
+  }
+  .presentation-img {
+    max-width: 56.9rem;
+    max-height: 59.3rem;
+    align-self: flex-end;
+  }
+  .presentation a {
+    align-self: center;
+  }
+}
 
 .about .container {
   display: flex;
@@ -507,6 +592,16 @@ html {
   letter-spacing: 0;
   color: #545454;
   max-width: 43rem;
+}
+@media (width < 1280px) {
+  .about .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8rem;
+  }
 }
 
 .friends .container {
@@ -634,6 +729,18 @@ html {
 .slider__button--notActive:hover {
   background: none;
 }
+@media (width < 1280px) {
+  .slider {
+    gap: 1.2rem;
+  }
+  .slider-container {
+    max-width: 58rem;
+    overflow: hidden;
+  }
+  .slider-list {
+    gap: 4rem;
+  }
+}
 
 .help .container {
   display: flex;
@@ -661,8 +768,8 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 5.5rem 12rem;
-  padding-inline: 12.7rem;
+  gap: 5.5rem 6rem;
+  padding-inline: 9.7rem;
 }
 .help-list-item {
   display: flex;
@@ -671,6 +778,7 @@ html {
   align-items: center;
   flex-wrap: nowrap;
   gap: 3rem;
+  width: 15rem;
 }
 .help-list-item p {
   font-family: Georgia;
@@ -680,6 +788,13 @@ html {
   line-height: 115%;
   letter-spacing: 0;
   color: #545454;
+  text-align: center;
+}
+@media (width < 1280px) {
+  .help-list {
+    padding-inline: 6rem;
+    gap: 6rem;
+  }
 }
 
 .donation .container {
@@ -749,6 +864,15 @@ html {
   color: #b2b2b2;
   max-width: 38rem;
 }
+@media (width < 1280px) {
+  .donation .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
 
 .footer .container {
   display: flex;
@@ -802,6 +926,16 @@ html {
 .footer-adress {
   gap: 3.5rem;
 }
+@media (width < 1280px) {
+  .footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+}
 
 .popup {
   background-color: rgba(41, 41, 41, 0.6);
@@ -832,6 +966,35 @@ html {
   height: 100%;
   border-radius: 0.9rem;
 }
+.popup__closeButton {
+  width: 5.2rem;
+  height: 5.2rem;
+  border: 0.2rem solid #F1CDB3;
+  border-radius: 50%;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.06em;
+  color: #545454;
+  text-align: center;
+  align-self: flex-end;
+  margin-block: 1rem;
+  background-image: url("../../../single/assets/imgs/close.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.popup__closeButton:hover {
+  background-color: #F1CDB3;
+}
+.popup-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
 .popup-description__title {
   font-family: Georgia;
   font-style: normal;
@@ -840,7 +1003,6 @@ html {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
-  margin-block: 5rem 1rem;
 }
 .popup-description__breed {
   font-family: Georgia;

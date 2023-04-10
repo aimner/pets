@@ -35,4 +35,10 @@
       max-width: 38rem;
     }
   }
+  @media (width < 1280px) {
+    .container {
+
+    @include flex(column-reverse, flex-start, center, nowrap);
+    }
+  }
 }

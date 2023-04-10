@@ -30,6 +30,10 @@
   max-width: 128rem;
   padding-inline: 4rem;
   margin: 0 auto;
+  @media (width < 1280px) { 
+  padding-inline: 3rem;
+
+  }
 }
 
 

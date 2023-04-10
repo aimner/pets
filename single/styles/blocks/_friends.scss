@@ -23,6 +23,7 @@
     max-width: 99rem;
     overflow: hidden;
   }
+
   &-list {
     position: relative;
     @include flex(row, flex-start, center, nowrap);
@@ -37,7 +38,21 @@
   &__button {
     @include roundButton;
   }
+
   &__button--notActive {
     @include roundButtonNotActive;
+  }
+  
+  @media (width < 1280px) {
+    gap: 1.2rem;
+
+    &-container {
+      max-width: 58rem;
+      overflow: hidden;
+    }
+
+    &-list {
+      gap: 4rem;
+    }
   }
 }

@@ -21,12 +21,19 @@
     gap: 2.5rem;
 
     &__title {
-        @include title(left);
+      @include title(left);
     }
 
     &__text {
       @include font(Arial, normal, 400, 1.5rem, 160%, 0, $dark-grey-color);
       max-width: 43rem;
+    }
+  }
+
+  @media (width < 1280px) {
+    .container {
+      @include flex(column-reverse, flex-start, center, nowrap);
+      gap: 8rem;
     }
   }
 }

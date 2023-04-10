@@ -32,4 +32,12 @@
   &-adress {
     gap: 3.5rem;
   }
+  @media (width < 1280px) {
+    .container {
+      @include flex(row, center, flex-start, wrap);
+      gap: 6rem;
+
+    }
+
+  }
 }
