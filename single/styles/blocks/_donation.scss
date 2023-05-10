@@ -40,7 +40,9 @@
       @include flex(column-reverse, flex-start, center, nowrap);
     }
   }
+
   @media (width < 768px) {
+
     &__img {
       width: 26rem;
       height: 13.5rem;
@@ -50,13 +52,17 @@
         object-fit: cover;
       }
     }
+
     &-description {
+      align-items: center;
       &-card {
+     
         p {
           @include font(Georgia, normal, 400, 1.5rem, 110%, 0.06em, $dark-grey-color);
         }
       }
     }
+
     &__title {
       align-self: center;
       text-align: center;

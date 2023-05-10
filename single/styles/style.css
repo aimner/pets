@@ -814,9 +814,11 @@ html {
   }
   .slider__buttonLeft {
     order: 2;
+    margin-left: 2.5rem;
   }
   .slider__buttonRight {
     order: 3;
+    margin-right: 2.5rem;
   }
 }
 
@@ -972,6 +974,9 @@ html {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .donation-description {
+    align-items: center;
+  }
   .donation-description-card p {
     font-family: Georgia;
     font-style: normal;
@@ -1105,7 +1110,7 @@ html {
   text-align: center;
   align-self: flex-end;
   margin-block: 1rem;
-  background-image: url("../../../single/assets/imgs/close.png");
+  background-image: url("../assets/imgs/close.png");
   background-position: center;
   background-repeat: no-repeat;
 }
