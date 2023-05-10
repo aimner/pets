@@ -37,15 +37,38 @@
 
   @media (width < 768px) {
     position: fixed;
-    background-color: red;
-    top: 5rem;
-    right: calc(0 );
+    @include flex(row-reverse, space-between, center, nowrap);
+
+    width: 100vw;
+    top: 0;
+    left: 100%;
+    transition: all .3s ease;
+    height: 100vh;
 
     &-list {
-      @include flex(column, space-between, center, nowrap);
+      padding-top: 24.8rem; 
+      @include flex(column, flex-start, center, nowrap);
+      background-color: $dark-color;
+      height: 100%;
+      width: 32rem;
+      a {
+        @include font(Arial, normal, 400, 3.2rem, 160%, 0, $white-grey-color);
+
+      }
+    }
+
+    &__shadow {
+      background:  rgba(41, 41, 41, 0.6);
+      height: 100%;
+      flex-grow: 1;
     }
 
   }
+}
+
+.nav--active {
+  left: 0;
+
 }
 
 .hamburger {
@@ -69,21 +92,19 @@
   }
 }
 
-.is-active {
-  margin-top: 45px;
-  margin-right: 54px;
+.hamburger--active {
   width: 30px;
   height: 30px;
 }
 
-.is-active .line:nth-child(2) {
+.hamburger--active .line:nth-child(2) {
   -webkit-transform: translateY(4px) rotate(90deg);
   -ms-transform: translateY(4px) rotate(90deg);
   -o-transform: translateY(4px) rotate(90deg);
   transform: translateY(4px) rotate(90deg);
 }
 
-.is-active .line:nth-child(1) {
+.hamburger--active .line:nth-child(1) {
   -webkit-transform: translateX(10px) translateY(14px) rotate(90deg);
   -ms-transform: translateX(10px) translateY(14px) rotate(90deg);
   -o-transform: translateX(10px) translateY(14px) rotate(90deg);
@@ -91,7 +112,7 @@
   margin: 0 0 0 0;
 }
 
-.is-active .line:nth-child(3) {
+.hamburger--active .line:nth-child(3) {
   -webkit-transform: translateX(-10px) translateY(-6px) rotate(-90deg);
   -ms-transform: translateX(-10px) translateY(-6px) rotate(-90deg);
   -o-transform: translateX(-10px) translateY(-6px) rotate(-90deg);

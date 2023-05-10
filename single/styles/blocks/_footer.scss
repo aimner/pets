@@ -36,8 +36,15 @@
     .container {
       @include flex(row, center, flex-start, wrap);
       gap: 6rem;
-
     }
-
+  }
+  @media (width < 768px) {
+    &-contacts,
+    &-adress {
+      h2 {
+        align-self: center;
+        text-align: center;
+      }
+    }
   }
 }

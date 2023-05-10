@@ -18,6 +18,7 @@ function slider() {
   const gap = () => {
     if (window.innerWidth >= 1280) return 90;
     if (window.innerWidth >= 768) return 40;
+    if (window.innerWidth >= 320) return 20;
   };
 
   const leftSwipe = () => {
@@ -69,7 +70,7 @@ function popup() {
   const changePopupClass = (id) => {
     POPUP_BLOCK.innerHTML = `
     <div class="popup-img">
-    <img src="./assets/imgs/${PETS[id].name}.png" alt="dog" />
+    <img src="./assets/imgs/${PETS[id].name}.png" alt="dog"/>
   </div>
   <div class="popup-description">
     <button class='popup__closeButton'></button>
@@ -113,3 +114,21 @@ function popup() {
 }
 
 popup();
+
+// BURGER
+
+function burger() {
+  const BURGER_ELEMENT = document.querySelector(".hamburger");
+  const NAV = document.querySelector('.nav')
+
+  const openAndCloseBurger = () => {
+    document.body.classList.toggle("blockScroll");
+    BURGER_ELEMENT.classList.toggle('hamburger--active')
+    NAV.classList.toggle('nav--active')
+  }
+
+  BURGER_ELEMENT.addEventListener("click", openAndCloseBurger);
+  NAV.addEventListener('click', openAndCloseBurger)
+}
+
+burger();

@@ -35,5 +35,12 @@
       @include flex(column-reverse, flex-start, center, nowrap);
       gap: 8rem;
     }
+    &-description { 
+      &__title {
+        align-self: center;
+        text-align: center;
+      }
+    }
+
   }
 }
