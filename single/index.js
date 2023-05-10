@@ -128,7 +128,11 @@ function burger() {
   }
 
   BURGER_ELEMENT.addEventListener("click", openAndCloseBurger);
-  NAV.addEventListener('click', openAndCloseBurger)
+  NAV.addEventListener('click', () => {
+    if(NAV.classList.contains('nav--active')) {
+      openAndCloseBurger()
+    }
+  })
 }
 
 burger();
