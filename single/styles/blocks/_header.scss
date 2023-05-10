@@ -77,11 +77,11 @@
   }
 
   .line {
-    width: 30px;
-    height: 2px;
+    width: 3rem;
+    height: .2rem;
     background-color: white;
     display: block;
-    margin: 8px auto;
+    margin: .8rem auto;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -93,8 +93,8 @@
 }
 
 .hamburger--active {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
 }
 
 .hamburger--active .line:nth-child(2) {
@@ -109,7 +109,7 @@
   -ms-transform: translateX(10px) translateY(14px) rotate(90deg);
   -o-transform: translateX(10px) translateY(14px) rotate(90deg);
   transform: translateX(10px) translateY(14px) rotate(90deg);
-  margin: 0 0 0 0;
+  margin: 0;
 }
 
 .hamburger--active .line:nth-child(3) {
@@ -117,5 +117,5 @@
   -ms-transform: translateX(-10px) translateY(-6px) rotate(-90deg);
   -o-transform: translateX(-10px) translateY(-6px) rotate(-90deg);
   transform: translateX(-10px) translateY(-6px) rotate(-90deg);
-  margin: 0 0 0 0;
+  margin: 0;
 }

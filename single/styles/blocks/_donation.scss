@@ -12,7 +12,7 @@
 
   &-description {
     @include flex(column, flex-start, flex-start, nowrap);
-    gap: 20px;
+    gap: 2rem;
 
     &-card {
       @include flex(row, flex-start, center, nowrap);
