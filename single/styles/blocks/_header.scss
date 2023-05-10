@@ -1,0 +1,121 @@
+.header {
+  .container {
+    background-image: url("../../../single/assets/imgs/background.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
+
+    @include flex(row, space-between, center, nowrap);
+    padding-top: 3rem;
+  }
+
+  &-title {
+    a {
+      display: block;
+      @include font(Georgia, normal, 400, 3.2rem, 110%, 0.06em, $light-brown);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @include font(Arial, normal, 400, 1.3rem, 1.5rem, 0.1em, $white-color);
+    }
+  }
+  @media screen {
+  }
+}
+
+.nav {
+  &-list {
+    @include flex(row, space-between, center, nowrap);
+    gap: 3.5rem;
+
+    &__item {
+      a {
+        @include font(Arial, normal, 400, 1.5rem, 160%, 0, $white-grey-color);
+      }
+    }
+  }
+
+  @media (width < 768px) {
+    position: fixed;
+    @include flex(row-reverse, space-between, center, nowrap);
+
+    width: 100vw;
+    top: 0;
+    left: 100%;
+    transition: all .3s ease;
+    height: 100vh;
+
+    &-list {
+      padding-top: 24.8rem; 
+      @include flex(column, flex-start, center, nowrap);
+      background-color: $dark-color;
+      height: 100%;
+      width: 32rem;
+      a {
+        @include font(Arial, normal, 400, 3.2rem, 160%, 0, $white-grey-color);
+
+      }
+    }
+
+    &__shadow {
+      background:  rgba(41, 41, 41, 0.6);
+      height: 100%;
+      flex-grow: 1;
+    }
+
+  }
+}
+
+.nav--active {
+  left: 0;
+
+}
+
+.hamburger {
+  @media (width >= 768px) {
+    display: none;
+  }
+
+  .line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+  }
+}
+
+.hamburger--active {
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger--active .line:nth-child(2) {
+  -webkit-transform: translateY(4px) rotate(90deg);
+  -ms-transform: translateY(4px) rotate(90deg);
+  -o-transform: translateY(4px) rotate(90deg);
+  transform: translateY(4px) rotate(90deg);
+}
+
+.hamburger--active .line:nth-child(1) {
+  -webkit-transform: translateX(10px) translateY(14px) rotate(90deg);
+  -ms-transform: translateX(10px) translateY(14px) rotate(90deg);
+  -o-transform: translateX(10px) translateY(14px) rotate(90deg);
+  transform: translateX(10px) translateY(14px) rotate(90deg);
+  margin: 0 0 0 0;
+}
+
+.hamburger--active .line:nth-child(3) {
+  -webkit-transform: translateX(-10px) translateY(-6px) rotate(-90deg);
+  -ms-transform: translateX(-10px) translateY(-6px) rotate(-90deg);
+  -o-transform: translateX(-10px) translateY(-6px) rotate(-90deg);
+  transform: translateX(-10px) translateY(-6px) rotate(-90deg);
+  margin: 0 0 0 0;
+}

@@ -1,0 +1,50 @@
+.footer {
+  .container {
+    @include flex(row, space-between, flex-start, nowrap);
+    padding-top: 4rem;
+    background-image: url("../../../single/assets/imgs/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-contacts,
+  &-adress {
+    @include flex(column, flex-start, flex-start, nowrap);
+    max-width: 29.5rem;
+    gap: 4.5rem;
+
+    h2 {
+      @include title(left);
+
+      color: $white-color;
+    }
+
+    div {
+      @include flex(row, flex-start, center, nowrap);
+      gap: 2rem;
+      a {
+        @include font(Georgia, normal, 400, 2rem, 115%, 0.06em, $light-brown);
+      }
+    }
+  }
+
+  &-adress {
+    gap: 3.5rem;
+  }
+  @media (width < 1280px) {
+    .container {
+      @include flex(row, center, flex-start, wrap);
+      gap: 6rem;
+    }
+  }
+  @media (width < 768px) {
+    &-contacts,
+    &-adress {
+      h2 {
+        align-self: center;
+        text-align: center;
+      }
+    }
+  }
+}

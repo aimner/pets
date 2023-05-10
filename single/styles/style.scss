@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/reset";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.blockScroll {
+    overflow: hidden;
+}
+
+.container {
+  @include container;
+}
+
+// BLOCKS
+
+@import "./blocks/header";
+@import "./blocks/presentation";
+@import "./blocks/about";
+@import "./blocks/friends";
+@import "./blocks/help";
+@import "./blocks/donation";
+@import "./blocks/footer";
+
+// POPUP
+@import './blocks/popup';

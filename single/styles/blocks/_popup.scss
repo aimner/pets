@@ -1,0 +1,131 @@
+.popup {
+  background-color: $dark-transparent-color;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  @include flex(column, center, center, nowrap);
+
+  &-container {
+    max-width: 90rem;
+    background-color: $light-white-color;
+    min-height: 50rem;
+    border-radius: $r9;
+    @include flex(row, flex-start, stretch, nowrap);
+    gap: 3rem;
+    padding-right: 2rem;
+  }
+  &-img {
+    img {
+      height: 100%;
+      border-radius: $r9;
+    }
+  }
+
+  &__closeButton {
+    @include roundButton;
+    align-self: flex-end;
+    margin-block: 1rem;
+    background-image: url("../../../single/assets/imgs/close.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &-description {
+    @include flex(column, flex-start, flex-start, nowrap);
+
+    &__title {
+      @include font(Georgia, normal, 400, 3.5rem, 130%, 0.06em, $dark-color);
+    }
+
+    &__breed {
+      @include font(Georgia, normal, 400, 2rem, 115%, 0.06em, $dark-color);
+      margin-bottom: 4rem;
+    }
+
+    &__text {
+      @include font(Georgia, normal, 400, 1.5rem, 110%, 0.06em, $dark-color);
+      margin-bottom: 4rem;
+    }
+    &-list-item {
+      list-style-type: disc;
+      margin-bottom: 1.1rem;
+      span:first-child {
+        @include font(Georgia, normal, 700, 1.5rem, 110%, 0.06em, $dark-color);
+      }
+      span:last-child {
+        @include font(Georgia, normal, 400, 1.5rem, 110%, 0.06em, $dark-color);
+      }
+    }
+  }
+
+  @media (width < 1000px) {
+    &-container {
+      max-width: 63rem;
+      min-height: 35rem;
+      gap: 2rem;
+      padding-right: 0.9rem;
+    }
+
+    &-img {
+      img {
+        height: 35rem;
+        width: 35rem;
+        border-radius: $r9;
+      }
+    }
+    &-description {
+      &__breed {
+        margin-bottom: 2rem;
+      }
+
+      &__text {
+        @include font(Georgia, normal, 400, 1.3rem, 110%, 0.06em, $dark-color);
+        margin-bottom: 2rem;
+      }
+      &-list-item {
+        margin-bottom: 0.6rem;
+      }
+    }
+    &__closeButton {
+      width: 3.2rem;
+      height: 3.2rem;
+      margin-block: 0.5rem 0;
+    }
+  }
+
+  @media (width < 650px) {
+    &-container {
+      max-width: 24rem;
+      min-height: 34.1rem;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    &-img {
+      display: none;
+    }
+
+    &-description {
+      &__title {
+        align-self: center;
+      }
+
+      &__breed {
+        margin-bottom: 2rem;
+        align-self: center;
+      }
+
+      &__text {
+        margin-bottom: 2.4rem;
+      }
+      &-list {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.popup--notActive {
+  display: none;
+}

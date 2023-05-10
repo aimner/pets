@@ -1,0 +1,83 @@
+.friends {
+  .container {
+    @include flex(column, flex-start, center, nowrap);
+    gap: 6rem;
+    padding-block: 8rem 10rem;
+    background-color: $dull-white-color;
+  }
+
+  &__title {
+    @include title(center);
+  }
+  &__link {
+    @include button;
+  }
+}
+
+// SLIDER
+.slider {
+  @include flex(row, flex-start, center, nowrap);
+  gap: 5.3rem;
+
+  &-container {
+    max-width: 99rem;
+    overflow: hidden;
+  }
+
+  &-list {
+    position: relative;
+    @include flex(row, flex-start, center, nowrap);
+    gap: 9rem;
+    transition: left 0.6s ease;
+
+    &-item {
+      @include card;
+    }
+  }
+
+  &__button {
+    @include roundButton;
+  }
+
+  &__button--notActive {
+    @include roundButtonNotActive;
+  }
+
+  @media (width < 1280px) {
+    gap: 0.7rem;
+
+    &-container {
+      max-width: 58rem;
+      overflow: hidden;
+    }
+
+    &-list {
+      gap: 4rem;
+    }
+  }
+
+  @media (width < 768px) {
+    &-container {
+      max-width: 27rem;
+    }
+
+    &-list {
+      gap: 2rem;
+    }
+  }
+  @media (width < 394px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &-container {
+      order: 1;
+    }
+
+    &__buttonLeft {
+      order: 2;
+    }
+    &__buttonRight {
+      order: 3;
+    }
+  }
+}

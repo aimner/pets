@@ -1,0 +1,46 @@
+.about {
+  .container {
+    @include flex(row, center, center, nowrap);
+    gap: 12rem;
+    padding-block: 8rem 10rem;
+    background-color: $white-color;
+  }
+
+  &-img {
+    max-width: 30rem;
+    max-height: 40.8rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-description {
+    @include flex(column, flex-start, flex-start, nowrap);
+    gap: 2.5rem;
+
+    &__title {
+      @include title(left);
+    }
+
+    &__text {
+      @include font(Arial, normal, 400, 1.5rem, 160%, 0, $dark-grey-color);
+      max-width: 43rem;
+    }
+  }
+
+  @media (width < 1280px) {
+    .container {
+      @include flex(column-reverse, flex-start, center, nowrap);
+      gap: 8rem;
+    }
+    &-description { 
+      &__title {
+        align-self: center;
+        text-align: center;
+      }
+    }
+
+  }
+}
