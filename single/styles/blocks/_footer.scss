@@ -2,7 +2,7 @@
   .container {
     @include flex(row, space-between, flex-start, nowrap);
     padding-top: 4rem;
-    background-image: url("../../../single/assets/imgs/background.png");
+    background-image: url("../assets/imgs/background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
