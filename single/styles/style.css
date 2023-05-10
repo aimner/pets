@@ -464,11 +464,11 @@ html {
   }
 }
 .hamburger .line {
-  width: 30px;
-  height: 2px;
+  width: 3rem;
+  height: 0.2rem;
   background-color: white;
   display: block;
-  margin: 8px auto;
+  margin: 0.8rem auto;
   transition: all 0.3s ease-in-out;
 }
 .hamburger .hamburger:hover {
@@ -476,8 +476,8 @@ html {
 }
 
 .hamburger--active {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
 }
 
 .hamburger--active .line:nth-child(2) {
@@ -486,12 +486,12 @@ html {
 
 .hamburger--active .line:nth-child(1) {
   transform: translateX(10px) translateY(14px) rotate(90deg);
-  margin: 0 0 0 0;
+  margin: 0;
 }
 
 .hamburger--active .line:nth-child(3) {
   transform: translateX(-10px) translateY(-6px) rotate(-90deg);
-  margin: 0 0 0 0;
+  margin: 0;
 }
 
 .presentation .container {
@@ -913,7 +913,7 @@ html {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 2rem;
 }
 .donation-description-card {
   display: flex;
