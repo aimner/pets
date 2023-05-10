@@ -35,7 +35,7 @@ function slider() {
       LEFT_BUTTON.classList.remove("slider__button--notActive");
       centerSlide += 1;
       SLIDER.style.left = `-${centerSlide * (SLIDE.offsetWidth + gap())}px`;
-      centerSlide === SLIDES.length - 2 && RIGHT_BUTTON.classList.add("slider__button--notActive");
+      centerSlide === SLIDES.length - 1 && RIGHT_BUTTON.classList.add("slider__button--notActive");
     }
   };
 
